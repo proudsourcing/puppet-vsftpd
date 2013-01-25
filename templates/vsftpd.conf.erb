@@ -20,21 +20,21 @@ listen=YES
 #listen_ipv6=YES
 #
 # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
-<% if anonymous_enable -%>
+<% if scope.lookupvar('vsftpd::anonymous_enable') -%>
 anonymous_enable=YES
 <% else -%>
 anonymous_enable=NO
 <% end -%>
 #
 # Uncomment this to allow local users to log in.
-<% if local_users -%>
+<% if scope.lookupvar('vsftpd::local_users') -%>
 local_users=YES
 <% else -%>
 local_users=NO
 <% end -%>
 #
 # Uncomment this to enable any form of FTP write command.
-<% if write_enable -%>
+<% if scope.lookupvar('vsftpd::write_enable') -%>
 write_enable=YES
 <% else -%>
 write_enable=NO
@@ -129,7 +129,7 @@ idle_session_timeout=120
 # (Warning! chroot'ing can be very dangerous. If using chroot, make sure that
 # the user does not have write access to the top level directory within the
 # chroot)
-<% if chroot_local_user -%>
+<% if scope.lookupvar('vsftpd::chroot_local_user') -%>
 chroot_local_user=YES
 <% else -%>
 chroot_local_user=NO
