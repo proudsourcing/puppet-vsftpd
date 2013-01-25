@@ -27,10 +27,10 @@ anonymous_enable=NO
 <% end -%>
 #
 # Uncomment this to allow local users to log in.
-<% if scope.lookupvar('vsftpd::local_users') -%>
-local_users=YES
+<% if scope.lookupvar('vsftpd::local_enable') -%>
+local_enable=YES
 <% else -%>
-local_users=NO
+local_enable=NO
 <% end -%>
 #
 # Uncomment this to enable any form of FTP write command.

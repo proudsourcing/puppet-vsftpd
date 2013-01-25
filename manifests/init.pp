@@ -7,7 +7,7 @@
 # [*anonymous_enable*]
 #  Allow anonymous FTP. Default: false
 #
-# [*local_users*]
+# [*local_enable*]
 #  Allow local users to log in. Default: false
 #
 # [*write_enable*]
@@ -20,7 +20,7 @@
 #
 # class { 'vsftpd':
 #   anonymous_enable  => false,
-#   local_users       => true,
+#   local_enable      => true,
 #   write_enable      => true,
 #   chroot_local_user => true,
 # }
@@ -31,7 +31,7 @@
 #
 class vsftpd (
   $anonymous_enable  = false,
-  $local_users       = false,
+  $local_enable      = false,
   $write_enable      = false,
   $chroot_local_user = true,
 ) {

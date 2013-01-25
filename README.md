@@ -11,7 +11,7 @@ Installs and manages vsftpd.
 
 **anonymous_enable** — Allow anonymous FTP. Default: false
 
-**local_users** — Allow local users to log in. Default: false
+**local_enable** — Allow local users to log in. Default: false
 
 **write_enable** — Enable any form of FTP write command. Default: false
 
@@ -19,7 +19,7 @@ Installs and manages vsftpd.
 
 	class { 'vsftpd':
 	  anonymous_enable  => false,
-	  local_users       => true,
+	  local_enable      => true,
 	  write_enable      => true,
 	  chroot_local_user => true,
 	}
