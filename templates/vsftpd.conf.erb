@@ -131,7 +131,6 @@ idle_session_timeout=120
 # chroot)
 <% if scope.lookupvar('vsftpd::chroot_local_user') -%>
 chroot_local_user=YES
-allow_writeable_chroot=YES
 <% else -%>
 chroot_local_user=NO
 <% end -%>
