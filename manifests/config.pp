@@ -24,5 +24,6 @@ class vsftpd::config {
       group  => 'root',
       source => $vsftpd::ssl_pem_key,
       notify => Service['vsftpd'],
+    }
   }
 }
