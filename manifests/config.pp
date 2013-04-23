@@ -16,4 +16,14 @@ class vsftpd::config {
     notify  => Service['vsftpd'],
   }
 
+  if $vsftpd::enable_ssl {
+    file { '/etc/ssl/private/vsftpd.pem':
+      ensure => present,
+      mode   => '0644',
+      owner  => 'root',
+      group  => 'root',
+      source => $vsftpd::ssl_pem_key,
+      notify => Service['vsftpd'],
+    }
+  }
 }
