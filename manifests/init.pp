@@ -37,7 +37,7 @@ class vsftpd (
 ) {
 
   # Compatibility check
-  $compatible = [ 'Debian', 'Ubuntu' ]
+  $compatible = [ 'Debian', 'Ubuntu', 'CentOS']
   if ! ($::operatingsystem in $compatible) {
     fail("Module is not compatible with ${::operatingsystem}")
   }
