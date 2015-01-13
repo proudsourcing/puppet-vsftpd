@@ -181,3 +181,7 @@ pasv_min_port=1024
 pasv_max_port=1224
 pasv_address=<%= @ec2_public_ipv4 %>
 <% end -%>
+
+<% if scope.lookupvar('vsftpd::writeable_chroot') -%>
+allow_writeable_chroot=yes
+<% end -%>

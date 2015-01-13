@@ -28,6 +28,9 @@
 # [*ssl_pem_key*]
 #  Use the file specified as the PEM Public/Private key pair for SSL support in the FTP server. Default: ""
 #
+# [*writeable_chroot*]
+#  https://www.benscobie.com/fixing-500-oops-vsftpd-refusing-to-run-with-writable-root-inside-chroot/
+#
 # === Examples
 #
 # class { 'vsftpd':
@@ -38,7 +41,8 @@
 #   idle_session_timeout => 600,
 #   ftpd_banner          => 'My FTP server',
 #   enable_ssl           => true,
-#   ssl_pem_key          => 'puppet:///modules/client_applications/myftpserver.pem'
+#   ssl_pem_key          => 'puppet:///modules/client_applications/myftpserver.pem',
+#	writeable_chroot 	 => true
 # }
 #
 # === Authors
@@ -54,6 +58,7 @@ class vsftpd (
   $ftpd_banner = '',
   $enable_ssl = false,
   $ssl_pem_key = '',
+  $writeable_chroot = true
 ) {
 
   # Compatibility check

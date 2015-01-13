@@ -25,6 +25,9 @@ Installs and manages vsftpd.
 
 **ssl_pem_key** — Use the file specified as the PEM Public/Private key pair for SSL support in the FTP server. Default: ""
 
+**writeable_chroot** — Chroot is writable: Default: true
+
+
 	class { 'vsftpd':
 	  anonymous_enable     => false,
 	  local_enable         => true,
@@ -33,9 +36,11 @@ Installs and manages vsftpd.
 	  idle_session_timeout => 600,
 	  ftpd_banner          => 'My FTP server',
 	  enable_ssl           => true,
-	  ssl_pem_key          => 'puppet:///files/myserver/myftpserver.pem'
+	  ssl_pem_key          => 'puppet:///files/myserver/myftpserver.pem',
+	  writeable_chroot 	   => true
 	}
 
 ## Authors
 
 [Sergey Stankevich](https://github.com/stankevich)
+[Tobias Merkl](https://github.com/tabsl) / [Proud Sourcing](https://github.com/proudsourcing)
