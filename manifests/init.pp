@@ -57,7 +57,7 @@ class vsftpd (
   $idle_session_timeout = 120,
   $ftpd_banner = '',
   $enable_ssl = false,
-  $ssl_pem_key = '/etc/ssl/private/vsftpd.pem',
+  $ssl_pem_key = '',
   $writeable_chroot = true
 ) {
 

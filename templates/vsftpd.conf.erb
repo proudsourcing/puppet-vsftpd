@@ -171,7 +171,7 @@ force_local_logins_ssl=YES
 ssl_tlsv1=YES
 ssl_sslv2=NO
 ssl_sslv3=NO
-rsa_cert_file=<%= scope.lookupvar('vsftpd::ssl_pem_key') %>
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
 <% end -%>
 
 <% if @ec2_public_ipv4 -%>
