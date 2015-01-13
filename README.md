@@ -42,5 +42,4 @@ Installs and manages vsftpd.
 
 ## Authors
 
-[Sergey Stankevich](https://github.com/stankevich)
-[Tobias Merkl](https://github.com/tabsl) / [Proud Sourcing](https://github.com/proudsourcing)
+[Sergey Stankevich](https://github.com/stankevich) / [Tobias Merkl](https://github.com/tabsl) / [Proud Sourcing](https://github.com/proudsourcing)
